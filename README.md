@@ -16,7 +16,7 @@ Aquest és un codi bàsic. No hi ha el més mínim control d'errors ni gestió d
 
 
 
-Veure Tutorial en pdf: [Mini_Ap_Spring_Boot_REST_API](Mini_Ap_Spring_Boot_REST_API)
+Veure Tutorial en pdf: [Mini_Ap_Spring_Boot_REST_API.pdf](Mini_Ap_Spring_Boot_REST_API.pdf)
 
 
 # Index
