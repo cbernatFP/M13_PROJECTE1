@@ -22,7 +22,8 @@ Podríem tenir els comentaris coma una llista dins el tutorial, però si un tuto
 Aquí sí que ens pot interessar consultar les ofertes d’una empresa, però també consultar ofertes en general per altres criteris…
 
 
-
+## Exemple 3
+## @ManyToOne i @OnToMany
 Finalment ens pot interessar fer la direcció bidireccional:
 https://www.baeldung.com/hibernate-one-to-many
 
