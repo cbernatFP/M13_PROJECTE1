@@ -3,7 +3,9 @@ package cbm.itic.m12.model;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import jakarta.persistence.Column;
@@ -24,8 +26,8 @@ public class Oferta {
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "id_empresa", nullable = false)
 	@OnDelete(action = OnDeleteAction.CASCADE)
-//  @JsonIgnore
-//	@JsonBackReference
+    //@JsonIgnore
+ 	//@JsonBackReference
     private Empresa empresa;	
 	
 	@Column(nullable = false, unique = true)

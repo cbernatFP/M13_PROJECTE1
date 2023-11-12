@@ -27,7 +27,7 @@ public class Empresa {
 	private String cif;
 	
     @OneToMany(mappedBy="empresa")
-    @JsonIgnore
+    //@JsonIgnore
     @JsonManagedReference
     private Set<Oferta> ofertes;
 
@@ -85,10 +85,10 @@ public class Empresa {
 		return ofertes;
 	}
 
-//
-//	public void setOfertes(Set<Oferta> ofertes) {
-//		this.ofertes = ofertes;
-//	}
+
+	public void setOfertes(Set<Oferta> ofertes) {
+		this.ofertes = ofertes;
+	}
 
 	
 	
