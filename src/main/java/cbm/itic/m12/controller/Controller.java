@@ -13,17 +13,39 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cbm.itic.m12.exception.EmpresaNotFoundException;
 import cbm.itic.m12.model.Empresa;
+import cbm.itic.m12.model.Oferta;
 import cbm.itic.m12.repository.EmpresaRepository;
+import cbm.itic.m12.repository.OfertaRepository;
 
 @RestController
 @RequestMapping("/api")
-public class EmpresaController {
+public class Controller {
 	@Autowired
 	private EmpresaRepository empresaRepository;
 
+	@Autowired
+	private OfertaRepository ofertaRepository;
+
+	
+	// Gestió OFERTES
+	// --------------------------------------------------------------------
+	
+	@GetMapping("/oferta")
+	public Iterable<Oferta> buscaTotes() {
+		return ofertaRepository.findAll();
+	}
+
+	@GetMapping("/oferta/{id}")
+	Oferta buscaPerIdOferta(@PathVariable Long id) {
+		return ofertaRepository.findById(id).orElseThrow();
+	}
+	
+
+	// Gestió EMPRESES
+	// --------------------------------------------------------------------
+	
 	@GetMapping("/empresa")
 	public Iterable<Empresa> buscaTots() {
-		System.out.println("222222222222");
 		return empresaRepository.findAll();
 	}
 
@@ -31,7 +53,6 @@ public class EmpresaController {
 //  ----------------	
 //	@GetMapping("/empresa/{id}")
 //	public Optional<Empresa> buscaPerId(@PathVariable long id) {
-//		System.out.println("33333333333");
 //    	return empresaRepository.findById(id);
 //	}
 
@@ -40,7 +61,6 @@ public class EmpresaController {
 // PQ DONA ERROR AQUEST CODI?????	
 //	@GetMapping("/empresa/{id}")
 //	public Empresa buscaPerId(@PathVariable long id) {
-//		System.out.println("33333333333");
 //    	return empresaRepository.findById(id);
 //	}
 
